@@ -17,3 +17,4 @@ Os clientes poderão solicitar recompensas utilizando os pontos disponíveis. As
 
 ### Situação do projeto
 MVP em desenvolvimento. As funcionalidades descritas ainda precisam ser implementadas e testadas.
+.
