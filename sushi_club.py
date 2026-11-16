@@ -28,6 +28,26 @@ def consultar_pontos(email):
     return clientes[email]["pontos"]
 
 
+
+def registrar_compra(email, valor):
+    email = email.strip().lower()
+
+    if email not in clientes:
+        raise ValueError("Cliente nao encontrado")
+
+    if valor <= 0:
+        raise ValueError("Valor invalido")
+
+    pontos = int(valor // 10)
+
+    clientes[email]["pontos"] += pontos
+
+    return {
+        "pontos_gerados": pontos,
+        "saldo_atual": clientes[email]["pontos"]
+    }
+
+
 if __name__ == "__main__":
     cadastrar_cliente("Cliente Teste", "teste@exemplo.com")
     print("Cliente cadastrado com sucesso!")
