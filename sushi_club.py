@@ -52,4 +52,41 @@ if __name__ == "__main__":
     cadastrar_cliente("Cliente Teste", "teste@exemplo.com")
     print("Cliente cadastrado com sucesso!")
     print("Pontos:", consultar_pontos("teste@exemplo.com"))
-  
+
+
+recompensas = {
+    "Temaki Promocional": 100,
+    "Combinado Especial": 200
+}
+
+solicitacoes = []
+
+
+def solicitar_recompensa(email, nome_recompensa):
+    email = email.strip().lower()
+
+    if email not in clientes:
+        raise ValueError("Cliente nao encontrado")
+
+    if nome_recompensa not in recompensas:
+        raise ValueError("Recompensa nao encontrada")
+
+    custo = recompensas[nome_recompensa]
+    saldo = clientes[email]["pontos"]
+
+    if saldo < custo:
+        return {
+            "status": "saldo insuficiente",
+            "saldo": saldo
+        }
+
+    pedido = {
+        "cliente": email,
+        "recompensa": nome_recompensa,
+        "pontos": custo,
+        "status": "aguardando aprovacao"
+    }
+
+    solicitacoes.append(pedido)
+    return pedido
+
