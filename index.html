@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#711f26">
+  <title>Sushi Club | YAS SUSHI — Protótipo funcional</title>
+  <style>
+    :root{font-size:16px;--bg:#f7f5f2;--surface:#fff;--surface2:#fff8ef;--ink:#232323;--sub:#585858;--line:#d6cec5;--accent:#8c3039;--accent2:#6d2029;--accentInk:#fff;--good:#125b39;--goodbg:#e7f5e9;--warn:#693c00;--warnbg:#fff3db;--focus:#1675e0;--shadow:0 14px 38px rgba(39,26,21,.07)}
+    body.contrast{--bg:#000;--surface:#111;--surface2:#191919;--ink:#fff;--sub:#efefef;--line:#f4f4f4;--accent:#ffe64c;--accent2:#ffdf36;--accentInk:#000;--good:#7dffad;--goodbg:#112d1c;--warn:#fff08a;--warnbg:#302700;--focus:#4ad5ff;--shadow:none}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--focus);outline-offset:3px}a{color:var(--accent)}.wrap{max-width:1080px;margin:0 auto;padding:0 22px}.top{background:var(--surface);border-bottom:1px solid var(--line)}.topin{min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 0}.brand{display:flex;gap:12px;align-items:center}.logo{width:56px;height:56px;background:var(--accent);color:var(--accentInk);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:700}.brand h1{font-size:1.45rem;line-height:1.12;margin:0;letter-spacing:.02em}.brand span{display:block;color:var(--sub);font-size:.81rem;letter-spacing:.07em}.access{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.access button{border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);padding:9px 12px;min-height:46px;font-weight:700}.access button[aria-pressed="true"]{background:var(--accent);color:var(--accentInk);border-color:var(--accent)}.hero{padding:36px 0 26px}.eyebrow{display:inline-block;color:var(--accent);font-size:.81rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.hero h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.16;margin:8px 0 10px}.hero p{margin:0;max-width:700px;color:var(--sub)}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 20px}.metric{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}.metric .num{display:block;font-size:1.8rem;font-weight:800;line-height:1.2}.metric .lbl{font-size:.86rem;color:var(--sub)}.layout{display:grid;grid-template-columns:1fr 300px;gap:18px;padding-bottom:40px}.maincard,.aside{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.maincard{overflow:hidden}.tabs{display:flex;flex-wrap:wrap;gap:2px;padding:10px;background:var(--surface2);border-bottom:1px solid var(--line)}.tab{background:transparent;border:2px solid transparent;border-radius:9px;padding:10px 15px;font-weight:700;color:var(--ink)}.tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accentInk)}.content{padding:26px}.panel[hidden]{display:none!important}.panel h3{font-size:1.45rem;margin:0 0 4px}.intro{color:var(--sub);margin:0 0 20px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin:0 0 16px}label{display:block;font-weight:700;margin-bottom:6px}input,select{display:block;width:100%;border:1.5px solid var(--line);border-radius:9px;padding:12px 11px;background:var(--surface);color:var(--ink);min-height:48px}small.help{display:block;color:var(--sub);margin-top:5px}.btn{border:0;background:var(--accent);color:var(--accentInk);padding:12px 18px;border-radius:10px;font-weight:800;min-height:46px}.btn:hover{background:var(--accent2)}.btn.alt{background:var(--surface);color:var(--ink);border:1px solid var(--line)}.result{margin-top:22px;padding:16px 18px;background:var(--goodbg);border-left:5px solid var(--good);border-radius:9px}.result strong{color:var(--good)}.result[hidden]{display:none}.result.error{background:var(--warnbg);border-color:var(--warn)}.result.error strong{color:var(--warn)}.aside{padding:20px;align-self:start}.aside h3{margin:0 0 14px;font-size:1.1rem}.aside p{font-size:.91rem;color:var(--sub)}.rule{padding:14px;background:var(--surface2);border-radius:10px;margin-bottom:16px}.rule strong{display:block;color:var(--accent);font-size:1.2rem}.line{border-top:1px solid var(--line);margin:16px 0}.customer{background:var(--surface2);padding:11px;border-radius:10px;margin:10px 0;overflow-wrap:anywhere}.customer strong{display:block}.customer small{color:var(--sub)}.empty{color:var(--sub);font-size:.92rem}.pill{font-size:.77rem;font-weight:800;border:1px solid var(--line);border-radius:50px;padding:3px 9px;display:inline-block}.footer{padding:16px 0 32px;color:var(--sub);border-top:1px solid var(--line);font-size:.83rem}.badge{display:inline-block;border:1px solid var(--line);padding:3px 8px;border-radius:6px;font-size:.78rem;color:var(--sub)}.list{padding-left:18px;margin-top:8px}.list li{margin-bottom:8px}.statusline{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.danger{margin-top:16px;font-size:.83rem;color:var(--sub)}
+    @media(max-width:780px){.layout{grid-template-columns:1fr}.summary{grid-template-columns:repeat(3,1fr)}.topin{align-items:flex-start}.fields{grid-template-columns:1fr}}
+    @media(max-width:490px){.summary{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:1/-1}.tab{flex:1;padding:9px 7px;font-size:.91rem}.content{padding:17px}.hero{padding:23px 0 20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap topin">
+      <div class="brand"><div class="logo" aria-hidden="true">Y</div><div><h1>YAS SUSHI</h1><span>SUSHI CLUB · FIDELIDADE</span></div></div>
+      <div class="access" role="group" aria-label="Recursos de acessibilidade">
+        <button id="smaller" type="button" aria-label="Diminuir tamanho das letras">A−</button>
+        <button id="larger" type="button" aria-label="Aumentar tamanho das letras">A+</button>
+        <button id="contrast" type="button" aria-pressed="false">◐ Alto contraste</button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="welcome"><span class="eyebrow">Programa de fidelidade · Protótipo funcional</span><h2 id="welcome">Cada compra aproxima você de uma recompensa.</h2><p>Cadastre um cliente, registre uma compra e acompanhe a pontuação. Um ponto a cada R$ 10,00 em compras.</p></section>
+    <section class="summary" aria-label="Resumo do sistema">
+      <div class="metric"><span class="num" id="totalCustomers">0</span><span class="lbl">Clientes cadastrados</span></div>
+      <div class="metric"><span class="num" id="totalPurchases">0</span><span class="lbl">Compras registradas</span></div>
+      <div class="metric"><span class="num" id="totalPoints">0</span><span class="lbl">Pontos acumulados</span></div>
+    </section>
+    <section class="layout" aria-label="Funcionalidades do Sushi Club">
+      <div class="maincard">
+        <div class="tabs" role="tablist" aria-label="Menu do Sushi Club">
+          <button type="button" role="tab" id="tab-cadastro" aria-controls="panel-cadastro" aria-selected="true" tabindex="0" class="tab" data-panel="cadastro">1. Cadastro</button>
+          <button type="button" role="tab" id="tab-compras" aria-controls="panel-compras" aria-selected="false" tabindex="-1" class="tab" data-panel="compras">2. Compras e pontos</button>
+          <button type="button" role="tab" id="tab-recompensas" aria-controls="panel-recompensas" aria-selected="false" tabindex="-1" class="tab" data-panel="recompensas">3. Recompensas</button>
+        </div>
+        <div class="content">
+          <section class="panel" id="panel-cadastro" role="tabpanel" aria-labelledby="tab-cadastro">
+            <h3>Cadastro de clientes</h3><p class="intro">Registre um novo participante do programa Sushi Club.</p>
+            <form id="formCadastro" novalidate>
+              <div class="fields"><div class="field"><label for="nome">Nome do cliente</label><input id="nome" name="nome" placeholder="Ex.: Cliente Demonstração" required autocomplete="off"></div><div class="field"><label for="email">E-mail do cliente</label><input id="email" name="email" type="email" placeholder="Ex.: demo@exemplo.com" required autocomplete="off"></div></div>
+              <button class="btn" type="submit">Cadastrar cliente</button>
+            </form>
+            <div class="result" id="resultadoCadastro" role="status" aria-live="polite" hidden></div>
+          </section>
+          <section class="panel" id="panel-compras" role="tabpanel" aria-labelledby="tab-compras" hidden>
+            <h3>Registro de compras e pontos</h3><p class="intro">Uma compra de R$ 150,00 gera 15 pontos. Somente compras com valor positivo são aceitas.</p>
+            <form id="formCompra" novalidate>
+              <div class="field"><label for="clienteCompra">Cliente cadastrado</label><select id="clienteCompra" required><option value="">Selecione um cliente</option></select></div>
+              <div class="field"><label for="valorCompra">Valor da compra (R$)</label><input id="valorCompra" type="number" inputmode="decimal" step="0.01" min="0.01" placeholder="Ex.: 150.00" required><small class="help">Digite 150 ou 150.00 para representar R$ 150,00.</small></div>
+              <button class="btn" type="submit">Registrar compra</button>
+            </form>
+            <div class="result" id="resultadoCompra" role="status" aria-live="polite" hidden></div>
+          </section>
+          <section class="panel" id="panel-recompensas" role="tabpanel" aria-labelledby="tab-recompensas" hidden>
+            <h3>Solicitação de recompensas</h3><p class="intro">As solicitações precisam ser aprovadas pelo restaurante. O pedido não desconta pontos nesta demonstração.</p>
+            <form id="formRecompensa" novalidate>
+              <div class="field"><label for="clienteRecompensa">Cliente cadastrado</label><select id="clienteRecompensa" required><option value="">Selecione um cliente</option></select></div>
+              <div class="field"><label for="recompensa">Recompensa desejada</label><select id="recompensa"><option value="Temaki Promocional">Temaki Promocional — 100 pontos</option><option value="Combinado Especial">Combinado Especial — 200 pontos</option></select></div>
+              <button class="btn" type="submit">Solicitar recompensa</button>
+            </form>
+            <div class="result" id="resultadoRecompensa" role="status" aria-live="polite" hidden></div>
+          </section>
+        </div>
+      </div>
+      <aside class="aside" aria-label="Informações do programa"><h3>Como funciona</h3><div class="rule"><strong>R$ 10,00 = 1 ponto</strong><span>Os pontos são calculados a cada compra.</span></div><p>Recompensas disponíveis: <strong>Temaki Promocional (100 pontos)</strong> e <strong>Combinado Especial (200 pontos)</strong>.</p><div class="line"></div><div class="statusline"><h3 style="margin:0">Clientes</h3><span class="badge">Dados de demonstração</span></div><div id="customerList" aria-live="polite"><p class="empty">Nenhum cliente cadastrado.</p></div><div class="line"></div><p>♿ <strong>Acessibilidade:</strong> experimente os botões A+ e Alto contraste no topo. A navegação também funciona por teclado.</p><p class="danger">Use apenas nomes e e-mails fictícios. Este protótipo grava os dados somente neste navegador e não está conectado ao sistema Python nem a um banco de dados.</p><button id="clearData" class="btn alt" type="button">Limpar dados de demonstração</button></aside>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">Sushi Club · YAS SUSHI · Protótipo acadêmico de interface funcional · Projeto de Software</div></footer>
+  <script>
+  (function(){'use strict';
+    const key='yas_sushi_club_demo_v1';
+    let data={clientes:{},compras:0,solicitacoes:[]};
+    try {const saved=JSON.parse(localStorage.getItem(key));if(saved&&saved.clientes&&typeof saved.clientes==='object')data={clientes:saved.clientes,compras:saved.compras||0,solicitacoes:saved.solicitacoes||[]};} catch(e){}
+    const $=id=>document.getElementById(id);
+    const save=()=>{try{localStorage.setItem(key,JSON.stringify(data));}catch(e){}};
+    const escapeHTML=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function show(id,message,error){const el=$(id);el.hidden=false;el.classList.toggle('error',!!error);el.innerHTML='<strong>'+(error?'Atenção: ':'Operação concluída: ')+'</strong>'+escapeHTML(message);}
+    function render(){const entries=Object.entries(data.clientes);$('totalCustomers').textContent=entries.length;$('totalPurchases').textContent=data.compras;$('totalPoints').textContent=entries.reduce((n,[_,c])=>n+(Number(c.pontos)||0),0);$('customerList').innerHTML=entries.length?entries.map(([email,c])=>'<div class="customer"><strong>'+escapeHTML(c.nome)+'</strong><small>'+escapeHTML(email)+'</small><div><strong>'+c.pontos+' ponto(s)</strong></div></div>').join(''):'<p class="empty">Nenhum cliente cadastrado.</p>';
+      for(const id of ['clienteCompra','clienteRecompensa']){const el=$(id),prior=el.value;el.innerHTML='<option value="">Selecione um cliente</option>'+entries.map(([email,c])=>'<option value="'+escapeHTML(email)+'">'+escapeHTML(c.nome)+' ('+c.pontos+' pontos)</option>').join('');if(data.clientes[prior])el.value=prior;}}
+    function selectTab(name){for(const tab of document.querySelectorAll('.tab')){const on=tab.dataset.panel===name;tab.setAttribute('aria-selected',on?'true':'false');tab.tabIndex=on?0:-1;$('panel-'+tab.dataset.panel).hidden=!on;} }
+    const tabs=[...document.querySelectorAll('.tab')];for(let i=0;i<tabs.length;i++){tabs[i].addEventListener('click',()=>selectTab(tabs[i].dataset.panel));tabs[i].addEventListener('keydown',e=>{if(['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();let n=e.key==='Home'?0:e.key==='End'?tabs.length-1:e.key==='ArrowRight'?(i+1)%tabs.length:(i-1+tabs.length)%tabs.length;selectTab(tabs[n].dataset.panel);tabs[n].focus();}});}
+    $('formCadastro').addEventListener('submit',e=>{e.preventDefault();const nome=$('nome').value.trim(),email=$('email').value.trim().toLowerCase();if(!nome||!/^\S+@\S+\.\S+$/.test(email))return show('resultadoCadastro','Informe um nome e um e-mail válido.',true);if(data.clientes[email])return show('resultadoCadastro','Este e-mail já está cadastrado.',true);data.clientes[email]={nome,pontos:0};save();render();show('resultadoCadastro',nome+' foi cadastrado com sucesso. Saldo inicial: 0 pontos.',false);$('formCadastro').reset();});
+    $('formCompra').addEventListener('submit',e=>{e.preventDefault();const email=$('clienteCompra').value;const valor=Number($('valorCompra').value);if(!data.clientes[email])return show('resultadoCompra','Selecione um cliente cadastrado.',true);if(!Number.isFinite(valor)||valor<=0)return show('resultadoCompra','Informe um valor de compra maior que zero.',true);const pontos=Math.floor(valor/10);data.clientes[email].pontos+=pontos;data.compras++;save();render();$('clienteCompra').value=email;show('resultadoCompra','Compra de '+valor.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})+' registrada. Pontos gerados: '+pontos+'. Saldo atual: '+data.clientes[email].pontos+' pontos.',false);$('valorCompra').value='';});
+    $('formRecompensa').addEventListener('submit',e=>{e.preventDefault();const email=$('clienteRecompensa').value;const nome=$('recompensa').value;const custo={'Temaki Promocional':100,'Combinado Especial':200}[nome];if(!data.clientes[email])return show('resultadoRecompensa','Selecione um cliente cadastrado.',true);if(data.clientes[email].pontos<custo)return show('resultadoRecompensa','Saldo insuficiente: '+data.clientes[email].pontos+' pontos. São necessários '+custo+' pontos.',true);data.solicitacoes.push({email,nome,custo,status:'aguardando aprovação'});save();show('resultadoRecompensa','Pedido de '+nome+' enviado! Status: aguardando aprovação do restaurante. Pontos ainda não debitados.',false);});
+    let font=Number(sessionStorage.getItem('yasFont')||16);if(!Number.isFinite(font))font=16;font=Math.max(16,Math.min(22,font));document.documentElement.style.fontSize=font+'px';$('larger').addEventListener('click',()=>{font=Math.min(22,font+2);document.documentElement.style.fontSize=font+'px';try{sessionStorage.setItem('yasFont',font);}catch(e){}});$('smaller').addEventListener('click',()=>{font=Math.max(16,font-2);document.documentElement.style.fontSize=font+'px';try{sessionStorage.setItem('yasFont',font);}catch(e){}});
+    const setContrast=on=>{document.body.classList.toggle('contrast',on);$('contrast').setAttribute('aria-pressed',String(on));$('contrast').textContent=on?'◐ Alto contraste: ligado':'◐ Alto contraste';try{sessionStorage.setItem('yasContrast',on?'1':'0');}catch(e){}};let remembered=false;try{remembered=sessionStorage.getItem('yasContrast')==='1';}catch(e){}setContrast(remembered);$('contrast').addEventListener('click',()=>setContrast(!document.body.classList.contains('contrast')));
+    $('clearData').addEventListener('click',()=>{if(!confirm('Deseja apagar os dados fictícios deste navegador?'))return;data={clientes:{},compras:0,solicitacoes:[]};save();render();for(const id of ['resultadoCadastro','resultadoCompra','resultadoRecompensa'])$(id).hidden=true;selectTab('cadastro');});
+    render();
+  })();
+  </script>
+</body>
+</html>
