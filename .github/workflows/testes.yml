@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.12'
 
-            - name: Instalar ferramenta de cobertura
+      - name: Instalar ferramenta de cobertura
         run: python -m pip install coverage
 
       - name: Executar testes com cobertura
